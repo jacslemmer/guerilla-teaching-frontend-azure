@@ -1,0 +1,288 @@
+.learning-portal {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.hero-container {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 500px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Testimonials Section - Override any global conflicts */
+.learning-portal .testimonials-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.learning-portal .testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonials-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.learning-portal .testimonials-ticker {
+  position: relative !important;
+  height: 300px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+}
+
+.learning-portal .testimonial-slide {
+  display: flex !important;
+  transition: transform 0.5s ease !important;
+  width: 300% !important;
+  height: 100% !important;
+}
+
+.learning-portal .testimonial-card {
+  width: 33.333% !important;
+  padding: 2rem !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
+  flex-basis: 33.333% !important;
+  position: relative !important;
+}
+
+.learning-portal .testimonial-text {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.learning-portal .testimonial-author {
+  text-align: center;
+}
+
+.learning-portal .testimonial-author h4 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.learning-portal .testimonial-author p {
+  color: #764ba2;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.mission-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.established-info {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.established-year {
+  font-size: 1.2rem;
+  color: #764ba2;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.slogan {
+  font-size: 1.3rem;
+  color: #667eea;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  margin-bottom: 1.5rem;
+}
+
+.value-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.value-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Solutions Section */
+.learning-portal .solutions-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.learning-portal .solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.learning-portal .solutions-ticker {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.learning-portal .solution-slide {
+  display: flex !important;
+  transition: transform 0.5s ease !important;
+  width: 200% !important;
+  height: auto !important;
+}
+
+.learning-portal .solution-card {
+  flex: 0 0 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 2rem !important;
+  padding: 2rem !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: transform 0.3s ease !important;
+  box-sizing: border-box !important;
+  width: 50% !important;
+}
+
+.learning-portal .solution-card:hover {
+  transform: scale(1.02);
+  text-decoration: none;
+  color: inherit;
+}
+
+.learning-portal .solution-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.learning-portal .solution-content {
+  flex: 1;
+}
+
+.learning-portal .solution-content h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.learning-portal .solution-content p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    max-height: 400px;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .testimonials-ticker {
+    height: 350px;
+  }
+
+  .learning-portal .solution-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .learning-portal .solution-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+}

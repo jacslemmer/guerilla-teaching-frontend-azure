@@ -1,0 +1,17 @@
+{
+  "name": "guerilla-teaching-frontend-azure",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:all": "npm run test:build && npm run test:lint && npm run test:api",
+    "test:build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "test:lint": "npm run lint --prefix backend --if-present && npm run lint --prefix frontend --if-present",
+    "test:api": "node scripts/test-api.js",
+    "test:integration": "npm run test:all",
+    "start:dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

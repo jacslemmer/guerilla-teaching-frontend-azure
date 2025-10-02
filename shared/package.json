@@ -1,0 +1,29 @@
+{
+  "name": "@guerilla-teaching/shared-types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript type definitions for Guerilla Teaching frontend and backend",
+  "main": "types/index.ts",
+  "types": "types/index.ts",
+  "files": [
+    "types/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "shared",
+    "guerilla-teaching"
+  ],
+  "author": "Guerilla Teaching",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.7.0"
+  }
+}

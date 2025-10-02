@@ -1,0 +1,45 @@
+﻿Page Type;Page Title;Section Title;Content Type;Content;Special Instructions
+Dropdown;e-Learning;Introduction;Text;Are you in a classroom, in a school, facing a teacher?;
+Dropdown;e-Learning;;;No?;
+Dropdown;e-Learning;;;Are you learning, researching, enquiring, investigating, gaining new knowledge, understanding and skills along the way?;
+Dropdown;e-Learning;;;Yes?;
+Dropdown;e-Learning;;;Then you are engaged in elearning!;
+Dropdown;e-Learning;;;If a traditional learning environment or “school” is not for you – for whatever reason – you live too far away, or it costs too much, or because of bullying or you are a actor or professional sports person on set or on tour, or simply due to the mind-numbing, spirit crushing tedium of it all, then elearning or distance learning is for you.;
+Dropdown;e-Learning;;;Millions of people all around the world have successfully completed courses of study both through elearning or “blended” learning (elearning with some elements of the course done face to face.);
+Dropdown;e-Learning;;;This guide is meant to give you a head start, to encourage you and inform you of the potential difficulties and suggest ways to overcome them. Firstly remember:;
+Dropdown;e-Learning;;;Many issues are the same: Time, money, socialising, relationships with others in the course, getting hold of resources, the excitement of learning new things, changing attitudes, learning difficulties, deadlines and achieving your goals.;
+Dropdown;e-Learning;The e-Learning Advantage;Video;https://www.youtube.com/watch?v=nzV1NmhC7ik;Show full width on desktop
+Dropdown;e-Learning;What you are learning and what you are not!;Text;;Larger font than paragraph text as it is a heading.  Different color - we are using purple for headings elsewhere, so repeat.
+Dropdown;e-Learning;;Text;What you learn will be determined by the subject you choose and what you should know by the end of the course is spelled out in the learning objectives and the aims of the course.;This is the first paragraph below the heading above
+Dropdown;e-Learning;;Text;Bloom et al (1956) classified the outcomes of learning into 3 areas or DOMAINS.;Black bold lettering, slightly larger than text above as it is a reference to an image to follow directly below this.
+Dropdown;e-Learning;;Png Image;"Image name is ""e-learning layout2-three-tiangles""";The image is in file location C:\Users\JacsLemmer\Desktop\Vibe Coding\guerilla-teaching-website\frontend\src\assets
+Dropdown;e-Learning;;Text;Now don’t kid your self – this is eLearning and you wont get any psycho motor development here…except for typing…not much of a physical activity really. Cognitive and effective skills however, yes indeed.;This text follows directly below the image listed above in this table.
+Dropdown;e-Learning;;Text;Cognitive is to do with thinking abilities: comprehending and understanding information – what you know and what you do with that knowledge. We try to reach you in all sorts of different ways – what is called accelerated blended learning, using several different media to reach a variety of learning styles. Effective skills are attitudes and approaches, and we will certainly develop those – well, this particular approach to e learning sets out to do this.;
+Dropdown;e-Learning;;Png image;"Image name is ""Blooms-Taxonomy-1""";The image is in file location C:\Users\JacsLemmer\Desktop\Vibe Coding\guerilla-teaching-website\frontend\src\assets
+Dropdown;e-Learning;Look at the cognitive pyramid above.;Text;;Larger font than paragraph text as it is a heading.  Different color - we are using purple for headings elsewhere, so repeat.
+Dropdown;e-Learning;;Text;The lowest level is knowledge – you can recall facts. Read the information and use the STUDY SKILLS course to find out how best to learn and recall these facts.;Bulletpoints
+Dropdown;e-Learning;;Text;Then comes comprehension – you can recall AND understand the significance of what you have learned. Answer the questions and complete the quizzes.;Bulletpoints
+Dropdown;e-Learning;;Text;Application: you can use the knowledge and understanding to write longer answers and be able to explain more complex ideas.;Bulletpoints
+Dropdown;e-Learning;;Text;Analysis – you can take a whole bunch of different sources and find connections and meaning from them.;Bulletpoints
+Dropdown;e-Learning;;Text;Synthesis – you can take all this information and create new meaning for your self.;Bulletpoints
+Dropdown;e-Learning;;Text;Evaluation – you can compare and contrast information and judge the significance and value of what has been learned.;Bulletpoints
+Dropdown;e-Learning;;Text;You must aim to attain the highest leaves of this domain and all the courses will help guide you in this effort.;Slightly larger font and bold black, as it is a call to action or understanding of the above.  It introduces the text to follow as well.
+Dropdown;e-Learning;;Text;The affective domain is not often dealt with by simple distance learning  courses. However, we want to instill a love of learning and a boundless curiosity in our students. We want them to look in wonder at at the world and believe that they are capable of anything thing they put their mind to. These ATTITUDES and VALUES must first be identified by their presence or absence, then encourage their adoption and then make them part of your everyday, normal response.;
+Dropdown;e-Learning;;Text;From unconscious incompetent, to conscious incompetent, to conscious competent, to unconscious competent.;
+Dropdown;e-Learning;;Text;Got it?;
+Dropdown;e-Learning;;Text;Good.;
+Dropdown;e-Learning;;Text;"Your attitude must develop from accepting all facts are true; to questioning everything and finding or creating your own truth.";
+Dropdown;e-Learning;Assessment;Text;;Slightly larger font and bold black, as it is a call to action or understanding of the above.  It introduces the text to follow as well.
+Dropdown;e-Learning;;Jpeg Image;"Image name is ""notepad-pencil-icon-Aplus""";The image is in file location C:\Users\JacsLemmer\Desktop\Vibe Coding\guerilla-teaching-website\frontend\src\assets
+Dropdown;e-Learning;Summary & Conclusion;Text;;Slightly larger font and bold black, as it is a call to action or understanding of the above.  It introduces the text to follow as well.
+Dropdown;e-Learning;;Text;Assessment for any course is the measurement of your achievement of the learning outcomes. IGCSE requires knowledge, comprehension, application and analysis. For AS Level both synthesis and evaluation will also be required. Always look at the PAST PAPERS provided at the start of each course to check where you are going.;
+Dropdown;e-Learning;;Text;;
+Dropdown;e-Learning;;Text;Our courses provide the following opportunities for assessment.;
+Dropdown;e-Learning;;Text;;
+Dropdown;e-Learning;;Text;Self assessment (by completing tasks set and then being provided with the memo or mark scheme.);
+Dropdown;e-Learning;;Text;;
+Dropdown;e-Learning;;Text;Peer assessment (tasks that require you to contribute to a blog or forum where others assess your contribution and you do the same for them.);
+Dropdown;e-Learning;;Text;;
+Dropdown;e-Learning;;Text;Summative assessment (tasks with short answers or multiple choice answers that are automatically marked and a grade given.);
+Dropdown;e-Learning;;Text;;
+Dropdown;e-Learning;;Text;Formative assessment (Longer written answers submitted as a file or presentation and assessed by your tutor and then discussed after ward so that you learn more from the experience.);

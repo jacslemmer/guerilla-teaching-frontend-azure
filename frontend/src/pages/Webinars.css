@@ -1,0 +1,277 @@
+/* Webinars Page - Based on guerillateaching.africa/live-lessons-and-webinars/ */
+
+.webinars {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.webinars .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.webinars-content {
+  padding: 40px 0;
+}
+
+/* Main Content */
+.webinars-main {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.webinars-main h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+}
+
+/* Logo Section */
+.logo-section {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  background: #e9ecef;
+  border-radius: 15px;
+  padding: 80px 60px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800px;
+}
+
+.webinars-logo {
+  max-width: 300px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Meetings Status */
+.meetings-status {
+  margin: 40px 0;
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.no-meetings {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Comment Section */
+.comment-section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comment-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+}
+
+.form-note {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.required {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+/* Form Styling */
+.webinar-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 4px;
+  transform: scale(1.2);
+}
+
+.form-checkbox label {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.cancel-btn {
+  background: transparent;
+  color: #666;
+  border: 2px solid #e9ecef;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .webinars-main h2 {
+    font-size: 2rem;
+  }
+  
+  .logo-container {
+    padding: 60px 40px;
+    min-height: 250px;
+  }
+  
+  .webinars-logo {
+    max-width: 250px;
+    max-height: 150px;
+  }
+  
+  .comment-section {
+    padding: 30px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .webinars .container {
+    padding: 0 15px;
+  }
+  
+  .webinars-content {
+    padding: 20px 0;
+  }
+  
+  .webinars-main h2 {
+    font-size: 1.8rem;
+  }
+  
+  .logo-container {
+    padding: 40px 20px;
+    min-height: 200px;
+  }
+  
+  .webinars-logo {
+    max-width: 200px;
+    max-height: 120px;
+  }
+  
+  .comment-section {
+    padding: 25px 15px;
+  }
+}

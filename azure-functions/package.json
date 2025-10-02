@@ -1,0 +1,31 @@
+{
+  "name": "guerilla-teaching-azure-functions",
+  "version": "1.0.0",
+  "description": "Azure Functions for Guerilla Teaching",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/communication-email": "^1.0.0",
+    "@azure/storage-blob": "^12.17.0"
+  },
+  "devDependencies": {
+    "@azure/functions-core-tools": "^4.0.0",
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.4"
+  },
+  "keywords": [
+    "azure",
+    "functions",
+    "serverless",
+    "education"
+  ],
+  "author": "Guerilla Teaching",
+  "license": "ISC"
+}

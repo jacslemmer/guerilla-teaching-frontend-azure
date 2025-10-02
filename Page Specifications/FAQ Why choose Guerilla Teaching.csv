@@ -1,0 +1,23 @@
+﻿Instructions on inerpreting this file:  This file contains instruction to build dropdowns on the Webpage called Frequently asked questions.  On this page are 8 dropdowns.  The specifications to build all 8 is found in the table below.  Column A indicates where each dropdown begins, where its content is found.;;;;;;
+Multiple Dropdowns;Page Type;Page Title   ;Section Title;Content Type;Content;Special Instructions
+1st Dropdown;;;;;;
+;Drop Down;Why Choose Guerilla Teaching?;;Text;This indicates that the detail is for another dropdown, not any of the above.;Bullet Point
+;Drop Down;;;Text;CONVENIENCE - Study on your time schedule, set your own pace, take the examination when you are ready.;Bullet Point
+;Drop Down;;;Text;AFFORDABILITY - Guerilla Teaching is the most reasonably priced and best value for money option currently available.;Bullet Point
+;Drop Down;;;Text;It WORKS! - Our First Cohort of Students achieve 100% A-C pass rate in IGCSE and IAS Levels.;Bullet Point
+2nd Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;What Makes Us Different?;;Text;We think you can do it yourself with a little help! Relationships and trust are our unique selling points. We have been at it longer than anyone else. Yes, our content is excellent, but it is the service and support you receive that makes your learning happen.;
+3rd Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;Can I study any Subject I want?;;Text with URL behind word;No, we currently only offer certain subjects at IGCSE and IAS Level, please refer to this page for the full list, and scroll down to the “Subjects Offered.”;"The words ""this page under content is a link to the following URL https://guerillateaching.africa/routes-to-matriculation/  Make it clear that it is cloickable ."
+4th Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;Where can I write Exams?;;Text with URL behind word;For a full list of Pearson and Cambridge Exam Centers contact TUTORS and EXAMS directly;"The words ""this page under content is a link to the following URL https://www.tutorsandexams.co.za/  Make it clear that it is cloickable ."
+5th Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;Whats the difference between Pearson and Cambridge?;;Text;They are BOTH accredited examination boards of the United Kingdom. The are BOTH accredited by USAf and SAQA for the purposes of Matric Exemption. They are BOTH accepted by Universities in South Africa and World Wide. Pearson offers some subjects Cambridge does not and vice versa. Not all exams with Pearson are offered in both May and November examination sessions. Pearson IAS Science subjects DO NOT REQUIRE PRACTICAL EXAMS. It is understood by many in education that Pearson examinations have a more practical, straightforward and applied approach, compared to Cambridge’s more theoretical approach. ;Bullet Point
+;;;;;It is vital that you communicate directly with Admissions Registrar of the University Department of your choice, before choosing your subjects.;Bullet Point
+6th Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;Do you offer both?;;Text;We primarily specialize in Pearson Edexcel subjects, however, IGCSE and AS Level Environmental Management, and IGCSE and AS Level Afrikaans are offered and they are only available through Cambridge. We also offer AS English Language through Cambridge as it is a popular choice.;
+7th Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;What is the two sitting rule?;;Text;You cannot spread your examinations out over too long a time period.;Bullet Point
+;Drop Down;;;Text;The simplest way to see if you are within the rule is to consider the EARLIEST date and the MOST RECENT date on the certificates you submit to USAf for the purpose of Matric Exemption. There should be no more than 24 months between these two dates, including resits.;Bullet Point
+8th Dropdown;;;;;;This indicates that the detail is for another dropdown, not any of the above.
+;Drop Down;Can I mix and Match Pearson and Cambridge for my Matric Exam?;;Text;Yes. International schools all offer a mix of examination boards (from AQA and OCR to Pearson and Cambridge). It is only in South Africa that schools offer only one or the other.;

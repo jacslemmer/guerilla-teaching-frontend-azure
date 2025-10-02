@@ -1,0 +1,723 @@
+/* Our Clients Page - Visual Card Layout */
+
+.our-clients {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.our-clients .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Founder Quote Section */
+.founder-quote-section {
+  text-align: center;
+  padding: 60px 0 40px 0;
+  margin-bottom: 20px;
+}
+
+.quote-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder-quote {
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 40px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.founder-attribution {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder-attribution strong {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.founder-attribution span {
+  color: #667eea;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Stats Header */
+.stats-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.stat-item {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Content */
+.clients-content {
+  padding-bottom: 40px;
+}
+
+/* Our Services Section */
+.our-services-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.our-services-section h2 {
+  font-size: 2.5rem;
+  color: #667eea;
+  font-weight: 700;
+  margin: 0 0 50px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-placeholder {
+  font-size: 3rem;
+  color: #667eea;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 25px 0;
+  min-height: 120px;
+}
+
+.service-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Card Base Styles */
+.testimonial-card,
+.rating-card,
+.academy-card,
+.interface-card,
+.quote-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover,
+.rating-card:hover,
+.academy-card:hover,
+.interface-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Large Testimonial Card */
+.large-card {
+  grid-column: span 2;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.profile-image.small {
+  width: 45px;
+  height: 45px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-placeholder {
+  font-size: 2rem;
+}
+
+.profile-image.small .avatar-placeholder {
+  font-size: 1.5rem;
+}
+
+.profile-info h4 {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.testimonial-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Rating Card */
+.rating-card {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.rating-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stars {
+  font-size: 1.5rem;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.rating-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.inline-counter {
+  display: inline;
+  font-weight: 600;
+}
+
+/* Academy Card */
+.academy-card {
+  text-align: center;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+}
+
+.academy-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.academy-logo-img {
+  max-width: 150px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+}
+
+.logo-text {
+  text-align: left;
+}
+
+.logo-main {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.academy-tagline {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Secondary Testimonial Card */
+.secondary-card .testimonial-content {
+  text-align: left;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.author-role {
+  font-size: 0.8rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+/* Interface Card */
+.interface-card {
+  grid-column: span 2;
+}
+
+.interface-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.interface-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.visit-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.visit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Quote Card */
+.quote-card {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-card p {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Bottom Section - Redesigned */
+.bottom-section {
+  margin-top: 40px;
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Summerhill Logos Card */
+.summerhill-logos-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.summerhill-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.summerhill-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.summerhill-text h4 {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+.summerhill-details {
+  text-align: center;
+}
+
+.summerhill-details h3 {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.summerhill-details p {
+  font-size: 1rem;
+  color: #667eea;
+  font-style: italic;
+  margin: 0 0 15px 0;
+}
+
+.summerhill-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summerhill-details li {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 5px;
+  padding: 3px 0;
+}
+
+/* Values Tree Card */
+.values-tree-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tree-section {
+  margin-bottom: 20px;
+}
+
+.tree-icon-large {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.values-text h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  text-decoration: underline;
+}
+
+.values-text blockquote {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Guerilla Section - Separated Layout */
+.guerilla-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Prominent Logo Card */
+.guerilla-logo-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.guerilla-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guerilla-logo-prominent {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Tagline Card */
+.guerilla-tagline-card {
+  background: #667eea;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.guerilla-tagline-card p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+/* Content Card */
+.guerilla-content-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.guerilla-content-card h2 {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  line-height: 1.3;
+}
+
+.guerilla-content-card p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .founder-quote-section {
+    padding: 40px 0 30px 0;
+  }
+  
+  .founder-quote {
+    font-size: 1.4rem;
+    margin: 0 0 30px 0;
+  }
+  
+  .founder-attribution strong {
+    font-size: 1.1rem;
+  }
+  
+  .founder-attribution span {
+    font-size: 0.9rem;
+  }
+  
+  .stats-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .large-card,
+  .interface-card,
+  .branding-card {
+    grid-column: span 1;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .our-services-section h2 {
+    font-size: 2rem;
+  }
+  
+  .service-item p {
+    min-height: auto;
+  }
+  
+  .bottom-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .testimonial-card,
+  .rating-card,
+  .academy-card,
+  .interface-card,
+  .quote-card,
+  .summerhill-logos-card,
+  .values-tree-card,
+  .guerilla-large-card {
+    padding: 20px;
+  }
+  
+  .guerilla-logo-large {
+    height: 100px;
+  }
+  
+  .tree-icon-large {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .summerhill-logo {
+    height: 60px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .rating-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-clients .container {
+    padding: 0 15px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .our-services-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-item {
+    padding: 25px 15px;
+  }
+  
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .brand-logo,
+  .academy-logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .brand-text,
+  .logo-text {
+    text-align: center;
+  }
+}

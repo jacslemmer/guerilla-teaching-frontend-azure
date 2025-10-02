@@ -1,0 +1,72 @@
+apiVersion: 2023-05-01
+location: eastus
+name: guerilla-teaching-backend
+resourceGroup: guerilla-teaching-rg
+properties:
+  environmentId: /subscriptions/{subscription-id}/resourceGroups/guerilla-teaching-rg/providers/Microsoft.App/managedEnvironments/guerilla-teaching-env
+  configuration:
+    ingress:
+      external: true
+      targetPort: 3001
+      allowInsecure: false
+      traffic:
+        - weight: 100
+          latestRevision: true
+    secrets:
+      - name: database-url
+        value: postgresql://gtadmin:YourSecurePassword123!@guerilla-teaching-db.postgres.database.azure.com:5432/guerilla_teaching?sslmode=require
+      - name: azure-storage-connection-string
+        value: DefaultEndpointsProtocol=https;AccountName=guerillateachingstorage;AccountKey=YOUR_STORAGE_KEY;EndpointSuffix=core.windows.net
+      - name: azure-communication-connection-string
+        value: YOUR_COMMUNICATION_CONNECTION_STRING
+  template:
+    containers:
+      - image: your-dockerhub-username/guerilla-teaching-backend:latest
+        name: guerilla-teaching-backend
+        env:
+          - name: NODE_ENV
+            value: production
+          - name: PORT
+            value: "3001"
+          - name: DATABASE_URL
+            secretRef: database-url
+          - name: AZURE_STORAGE_CONNECTION_STRING
+            secretRef: azure-storage-connection-string
+          - name: AZURE_STORAGE_CONTAINER_NAME
+            value: assets
+          - name: AZURE_COMMUNICATION_CONNECTION_STRING
+            secretRef: azure-communication-connection-string
+          - name: AZURE_EMAIL_SENDER_ADDRESS
+            value: noreply@guerillateaching.com
+          - name: CORS_ORIGIN
+            value: https://your-static-web-app.azurestaticapps.net
+          - name: LOG_LEVEL
+            value: info
+          - name: LOG_CONSOLE
+            value: "true"
+          - name: LOG_FILE
+            value: "false"
+        resources:
+          cpu: 0.5
+          memory: 1Gi
+        probes:
+          - type: Liveness
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 30
+            periodSeconds: 30
+          - type: Readiness
+            httpGet:
+              path: /health
+              port: 3001
+            initialDelaySeconds: 5
+            periodSeconds: 10
+    scale:
+      minReplicas: 0
+      maxReplicas: 10
+      rules:
+        - name: http-rule
+          http:
+            metadata:
+              concurrentRequests: "30"

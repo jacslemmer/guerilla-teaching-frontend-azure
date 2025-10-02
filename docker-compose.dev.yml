@@ -1,0 +1,164 @@
+version: '3.8'
+
+services:
+  # Shared types service - builds shared types for other services
+  shared:
+    build:
+      context: ./shared
+      dockerfile: Dockerfile
+    volumes:
+      - ./shared:/app
+      - shared_node_modules:/app/node_modules
+    command: npm run build:watch
+    environment:
+      - NODE_ENV=development
+    networks:
+      - guerilla-network
+
+  # Backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "${BACKEND_PORT:-3001}:3001"
+    volumes:
+      - ./backend:/app
+      - backend_node_modules:/app/node_modules
+      - ./shared/dist:/app/node_modules/@guerilla-teaching/shared-types
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+      - BACKEND_HOST=${BACKEND_HOST:-localhost}
+      - CORS_ORIGIN=${CORS_ORIGIN:-http://localhost:3000}
+      - LOG_LEVEL=${LOG_LEVEL:-debug}
+      - LOG_CONSOLE=${LOG_CONSOLE:-true}
+      - LOG_FILE=${LOG_FILE:-true}
+      - SHOW_STACK_TRACE=${SHOW_STACK_TRACE:-true}
+    command: npm run dev
+    depends_on:
+      - shared
+    networks:
+      - guerilla-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+  # Frontend service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: development
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+      - ./shared/dist:/app/node_modules/@guerilla-teaching/shared-types
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - REACT_APP_API_URL=${REACT_APP_API_URL:-http://localhost:3001}
+      - REACT_APP_LOG_LEVEL=${REACT_APP_LOG_LEVEL:-debug}
+      - REACT_APP_LOG_CONSOLE=${REACT_APP_LOG_CONSOLE:-true}
+      - REACT_APP_LOG_JSON=${REACT_APP_LOG_JSON:-false}
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    command: npm run dev
+    depends_on:
+      - backend
+      - shared
+    networks:
+      - guerilla-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped
+
+  # Development database (optional)
+  postgres-dev:
+    image: postgres:15-alpine
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-guerilla_teaching_dev}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./backend/migrations:/docker-entrypoint-initdb.d
+    networks:
+      - guerilla-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Redis for caching and sessions (optional)
+  redis-dev:
+    image: redis:7-alpine
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_dev_data:/data
+    networks:
+      - guerilla-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+  # Mail service for development (MailHog)
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - "${MAILHOG_WEB_PORT:-8025}:8025"  # Web interface
+      - "${MAILHOG_SMTP_PORT:-1025}:1025" # SMTP server
+    networks:
+      - guerilla-network
+    restart: unless-stopped
+
+  # Development tools container
+  devtools:
+    build:
+      context: .
+      dockerfile: Dockerfile.devtools
+    volumes:
+      - ./:/workspace
+      - devtools_node_modules:/workspace/node_modules
+    environment:
+      - NODE_ENV=development
+    command: tail -f /dev/null  # Keep container running
+    networks:
+      - guerilla-network
+    profiles:
+      - tools
+
+volumes:
+  # Named volumes for node_modules to improve performance
+  shared_node_modules:
+  backend_node_modules:
+  frontend_node_modules:
+  devtools_node_modules:
+  
+  # Database volumes
+  postgres_dev_data:
+  redis_dev_data:
+
+networks:
+  guerilla-network:
+    driver: bridge

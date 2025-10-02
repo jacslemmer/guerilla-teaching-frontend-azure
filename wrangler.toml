@@ -1,0 +1,28 @@
+name = "guerilla-teaching-website"
+main = "worker/index.js"
+compatibility_date = "2024-05-01"
+
+# Environment variables for the worker
+[vars]
+FRONTEND_URL = "https://guerilla-teaching.pages.dev"
+API_BASE_URL = "https://guerilla-teaching-website.jacobuslemmer.workers.dev"
+
+# Production environment
+[env.production]
+name = "guerilla-teaching-prod"
+vars = { FRONTEND_URL = "https://guerilla-teaching.com" }
+
+# D1 Database bindings
+[[d1_databases]]
+binding = "DB"
+database_name = "guerilla-teaching-db"
+database_id = "your-d1-database-id-here"
+
+# R2 Storage bindings
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "guerilla-teaching-assets"
+
+# Email routing (when available)
+# [send_email]
+# name = "guerilla-teaching-email" 

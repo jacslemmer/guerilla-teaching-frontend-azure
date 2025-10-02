@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  # Frontend Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONTEND_PORT:-3000}:${FRONTEND_PORT:-3000}"
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - REACT_APP_API_BASE_URL=http://backend:${BACKEND_PORT:-3001}
+      - FRONTEND_PORT=${FRONTEND_PORT:-3000}
+      - BACKEND_PORT=${BACKEND_PORT:-3001}
+      - BACKEND_HOST=backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - guerilla-network
+    restart: unless-stopped
+    command: npm run dev
+
+  # Backend Service  
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACKEND_PORT:-3001}:${BACKEND_PORT:-3001}"
+    environment:
+      - NODE_ENV=${NODE_ENV:-development}
+      - PORT=${BACKEND_PORT:-3001}
+      - BACKEND_PORT=${BACKEND_PORT:-3001}
+      - FRONTEND_PORT=${FRONTEND_PORT:-3000}
+      - FRONTEND_HOST=frontend
+      - HOST=0.0.0.0
+      - CORS_ORIGINS=http://localhost:${FRONTEND_PORT:-3000},http://frontend:${FRONTEND_PORT:-3000}
+      # Logging configuration
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_CONSOLE=true
+      - LOG_JSON=${LOG_JSON:-false}
+      # Error handling
+      - SHOW_STACK_TRACE=${SHOW_STACK_TRACE:-true}
+      - ENABLE_REQUEST_LOGGING=true
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - guerilla-network
+    restart: unless-stopped
+    command: npm run dev
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${BACKEND_PORT:-3001}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Shared Types (for development)
+  shared:
+    build:
+      context: ./shared
+      dockerfile: Dockerfile
+    volumes:
+      - ./shared:/app
+      - /app/node_modules
+    networks:
+      - guerilla-network
+    command: npm run build:watch
+
+networks:
+  guerilla-network:
+    driver: bridge
+    name: guerilla-teaching-network
+
+volumes:
+  frontend_node_modules:
+  backend_node_modules:
+  shared_node_modules:

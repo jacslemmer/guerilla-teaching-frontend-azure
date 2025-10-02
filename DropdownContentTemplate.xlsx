@@ -1,0 +1,8 @@
+| Page Type | Dropdown Title      | Section Title   | Content Type | Content                        | Special Instructions         |
+|-----------|--------------------|----------------|-------------|--------------------------------|------------------------------|
+| Dropdown  | What is e-Learning | Introduction   | Text        | E-learning is...               |                              |
+| Dropdown  | What is e-Learning | Video Example  | Video       | https://youtube.com/xyz        | Show full width on desktop   |
+| Dropdown  | What is e-Learning | Key Benefits   | Text        | Flexibility, Accessibility...  | Use bullet points            |
+| Dropdown  | What is e-Learning | Learn More     | Links       | https://example.com/article1   |                              |
+
+</rewritten_file> 

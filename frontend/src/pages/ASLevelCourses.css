@@ -1,0 +1,133 @@
+.aslevel-courses {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.breadcrumb {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-section {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.courses-section {
+  padding: 2rem 0 4rem 0;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.course-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.course-content {
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+
+.course-title:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.course-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.original-price {
+  font-size: 0.95rem;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-size: 1rem;
+  color: #667eea;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .course-image img {
+    height: 140px;
+  }
+} 
